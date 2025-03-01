@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Appointment</title>
+</head>
+<body>
+    <h1>Book an Appointment with {{ doctor.name }}</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="id_date">Select Date:</label>
+        <input type="date" name="date" id="id_date" required>
+
+        <label for="id_time">Select Time:</label>
+        <input type="time" name="time" id="id_time" required>
+
+        <button type="submit">Book</button>
+    </form>
+</body>
+</html>
